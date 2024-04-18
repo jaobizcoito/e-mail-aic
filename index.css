@@ -1,0 +1,67 @@
+
+body {
+    background-color: #1C2135; /* Cor de fundo */
+    font-family: Figtree, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto; /* Isso centraliza a div .container horizontalmente */
+    text-align: center; /* Isso centraliza o conteúdo dentro da div .container */
+    border-radius: 80px; /* Arredonda as bordas da div .container */
+    max-width: 600px;
+    margin: 20px auto; /* Margem superior e inferior de 20px, e centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+
+}
+
+#meuFormulario {
+    max-width: 400px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do formulário */
+    background:  #5A6794; /* Adiciona cor */
+    padding: 20px; /* Adiciona um espaçamento interno para o conteúdo */
+    border-radius: 20px; /* Arredonda as bordas do formulário */
+    box-shadow: 0 0 10px rgba(187, 54, 54, 0.1); /* Adiciona uma sombra */
+}
+
+#observacoes {
+    margin: 0 auto; /* Isso centraliza o texto dentro da caixa de observações */
+    border-radius: 20px; /* Arredonda as bordas da caixa de texto */
+    line-height: 1.5; /* Reduz o espaçamento entre linhas */
+}
+
+button {
+    border-radius: 20px; /* Torna os botões redondos */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+    padding: 10px 20px; /* Adiciona um espaçamento interno aos botões */
+    background-color: #8794C0; /* Cor de fundo azul */
+    color: white; /* Cor do texto branca */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+    padding: 8px 16px; /* Espaçamento interno menor nos botões */
+}
+
+button:hover {
+    background-color: #8794C0; /* Altera a cor de fundo ao passar o mouse */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Altera a sombra ao passar o mouse */
+}
+
+.marca {
+    display: inline-block; /* Permite aplicar bordas e bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: white; /* Cor de fundo branca */
+    color: black; /* Cor do texto */
+    border-radius: 50px; /* Bordas arredondadas para criar uma forma de círculo */
+}
+input[type="text"] {
+    border-radius: 15px; /* Arredonda as bordas dos campos de entrada de texto */
+    padding: 10px; /* Adiciona um espaçamento interno aos campos de entrada de texto */
+    margin-bottom: 10px; /* Adiciona um espaçamento inferior entre os campos */
+    border: 1px solid #8794C0; /* Adiciona uma borda sólida aos campos */
+    width: 100%; /* Faz com que os campos de entrada de texto ocupem toda a largura disponível */
+    box-sizing: border-box; /* Garante que o padding e a borda não afetem a largura total */
+    padding: 8px; /* Espaçamento interno menor nos campos de entrada de texto */
+}
+
