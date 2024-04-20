@@ -28,7 +28,6 @@ body {
 #observacoes {
     margin: 0 auto; /* Isso centraliza o texto dentro da caixa de observações */
     border-radius: 20px; /* Arredonda as bordas da caixa de texto */
-    line-height: 1.5; /* Reduz o espaçamento entre linhas */
 }
 
 button {
@@ -40,7 +39,6 @@ button {
     border: none; /* Remove a borda */
     cursor: pointer; /* Muda o cursor ao passar por cima */
     transition: all 0.3s ease; /* Adiciona uma transição suave */
-    padding: 8px 16px; /* Espaçamento interno menor nos botões */
 }
 
 button:hover {
@@ -62,6 +60,19 @@ input[type="text"] {
     border: 1px solid #8794C0; /* Adiciona uma borda sólida aos campos */
     width: 100%; /* Faz com que os campos de entrada de texto ocupem toda a largura disponível */
     box-sizing: border-box; /* Garante que o padding e a borda não afetem a largura total */
-    padding: 8px; /* Espaçamento interno menor nos campos de entrada de texto */
 }
+select {
+    border-radius: 10px; /* Arredonda as bordas da caixa de seleção */
+    padding: 8px; /* Adiciona um espaçamento interno à caixa de seleção */
+    margin-bottom: 10px; /* Adiciona um espaçamento inferior entre os campos */
+    border: 1px solid #8794C0; /* Adiciona uma borda sólida à caixa de seleção */
+    width: 50%; /* Define a largura da caixa de seleção como 50% do contêiner pai */
+    box-sizing: border-box; /* Garante que o padding e a borda não afetem a largura total */
+    background-color: white; /* Adiciona uma cor de fundo branca à caixa de seleção */
+    color: black; /* Define a cor do texto da caixa de seleção */
+    font-size: 12px; /* Define o tamanho da fonte da caixa de seleção */
+    height: 30px; /* Define a altura da caixa de seleção */
+}
+
+
 
