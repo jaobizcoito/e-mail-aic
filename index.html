@@ -11,6 +11,14 @@
         <h1 class="marca">PREENCHIMENTO DE AIC</h1>
         <form id="meuFormulario">
 
+            <label for="motivo">Selecione o Motivo:</label>
+            <br>
+            <select id="motivo" name="motivo">
+                <option value="cobranca">Cobrança de Documentação</option>
+                <option value="cancelamento">Cancelamento de Apólice</option>
+            </select>
+            <br>
+
             <label for="nome">NOME DO CLIENTE</label>
             <br>
             <input type="text" id="nome" name="nome" required>
@@ -49,9 +57,14 @@
             const proposta = document.getElementById('proposta').value;
             const portabilidade = document.getElementById('portabilidade').value;
             const certificado = document.getElementById('certificado').value;
+            const motivo = document.getElementById('motivo').value;
 
             // Texto inicial predefinido
-            let textoInicial = `Senhores,
+            let textoInicial = '';
+            
+            // Verifica o motivo selecionado e gera o texto correspondente
+            if (motivo === 'cobranca') {
+                textoInicial = `Senhores,
 
 Recebemos a solicitação de portabilidade proposta nº ${proposta} do(a) cliente ${nome}, porém, não foram disponibilizados a proposta de adesão e o termo de portabilidade assinados pelo cliente. 
 
@@ -60,6 +73,19 @@ Conforme comunicado enviado no dia 18/09/2017, é obrigatório o envio dos docum
 IMPORTANTE: NÃO SERÁ NECESSÁRIO REFAZER OS PEDIDOS, APENAS ENVIAR A PROPOSTA E TERMO ASSINADOS, EVITANDO ASSIM, PEDIDOS DUPLICADOS.  
 
 Disponibilizaremos o prazo de D+1 (dia útil) para envio dos documentos via ocorrência. Caso até as 17h do próximo dia útil o termo de portabilidade e a proposta de adesão não sejam disponibilizados, o pedido de portabilidade n° ${portabilidade} e o certificado nº ${certificado} serão cancelados.`;
+            } else if (motivo === 'cancelamento') {
+                textoInicial = `Senhores,
+
+Recebemos a solicitação de portabilidade proposta nº ${proposta} do(a) cliente ${nome} no dia XX/XX/2024 porém, não foram disponibilizados a proposta de adesão e o termo de portabilidade assinados pelo cliente.  
+
+Conforme comunicado enviado no dia 18/09/2017, é obrigatório o envio dos documentos via ASC para conformidade do processo.  
+
+Foram disponibilizados mais 1 dia útil para envio dos documentos, no entanto o ASC com os formulários assinados não foi registrado, sendo assim, o pedido de portabilidade n° ${portabilidade} e o certificado nº ${certificado} foram cancelados nesta data. 
+
+Pedimos que o processo seja reenviado via SIVPFWEB apenas quando houver a anuência do cliente na solicitação e que em seguida, encaminhem os documentos digitalizados para evitar um novo cancelamento e desgaste com o cliente. 
+
+Salientamos que os documentos referentes ao processo de portabilidade n° ${portabilidade} não são mais válidos, e que no caso de reenvio de nova solicitação, deverá ser coletada a assinatura do cliente na nova proposta e termo de portabilidade que serão gerados.`;
+            }
 
             // Define o texto formatado nas observações
             document.getElementById('observacoes').value = textoInicial;
